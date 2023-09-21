@@ -1,21 +1,28 @@
 
-let currentInput = document.getElementById("inp").value
+let elem = document.getElementById("inp");
 
 
 
 
 document.addEventListener('click', function(e){
     let elID=e.target.id;
-    console.log(elID)
+        
 
-        if(elID == "bracket-l")
-            currentInput+= "("
-            currentInput.innerHTML= "("
-        if(elID == "bracket-r")
-            currentInput += ")"
-            document.getElementById("inp").innerHTML=")"
-        if(elID = "")
+        if(elID == "bracket-l"){
+            let i = document.getElementById("bracket-l").value
+            elem.value += i
+        }
+
+        if(elID == "bracket-r"){
+            let i = document.getElementById("bracket-r").value
+            elem.value += i
+        }
+            
+        if(elID == "clear"){
+            elem.value = "";
+        }
+        
         if(elID == "equals")
             currentInput = ""
-    console.log(currentInput)
+    console.log(elem.value)
 })
